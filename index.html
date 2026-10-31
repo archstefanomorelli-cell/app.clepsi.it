@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Clepsi</title>
+    <!-- Clepsi installabile sulla schermata Home (iPhone e Android), con le sue notifiche. -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" type="image/png" href="/icone/icona-192.png" />
+    <link rel="apple-touch-icon" href="/icone/apple-touch-icon.png" />
+    <meta name="theme-color" content="#F6F5F1" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Clepsi" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+        background-color: #f6f5f1;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <link rel="icon" href="/favicon.ico"/>    <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/node_modules/@expo-google-fonts/bricolage-grotesque/700Bold/BricolageGrotesque_700Bold.2f7de7a336f650f9cee5ed919cc3b003.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/node_modules/@expo-google-fonts/bricolage-grotesque/800ExtraBold/BricolageGrotesque_800ExtraBold.5bfb4fa1f8907c768231d97bc27e8df9.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/node_modules/@expo-google-fonts/dm-sans/400Regular/DMSans_400Regular.74f9bb7405caec741a24db735b2c5733.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/node_modules/@expo-google-fonts/dm-sans/600SemiBold/DMSans_600SemiBold.b68921520b1d885dd7f854427cde3e82.ttf" />
+    <link rel="preload" as="font" type="font/ttf" crossorigin href="/assets/node_modules/@expo-google-fonts/dm-sans/700Bold/DMSans_700Bold.7a6c1a2c6196d4d0e617b57adb997b3b.ttf" />
+    <style>@font-face { font-family: BricolageGrotesque_800ExtraBold; src: url(/assets/node_modules/@expo-google-fonts/bricolage-grotesque/800ExtraBold/BricolageGrotesque_800ExtraBold.5bfb4fa1f8907c768231d97bc27e8df9.ttf); font-display: swap; }</style>
+  </head>
+
+  <body>
+    <noscript>Per usare Clepsi serve JavaScript.</noscript>
+    <!-- Il logo che si vede mentre Clepsi parte: lo sostituisce l'app appena è pronta. -->
+    <div id="root">
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 14px; align-items: center; justify-content: center; background-color: #f6f5f1">
+        <svg width="56" height="56" viewBox="0 0 22 22" aria-hidden="true">
+          <circle cx="11" cy="11" r="9.5" fill="none" stroke="#121214" stroke-width="1.5" />
+          <path d="M11 1.5 A9.5 9.5 0 0 0 11 20.5 Z" fill="#121214" />
+        </svg>
+        <div style="font-family: BricolageGrotesque_800ExtraBold, system-ui, sans-serif; font-size: 28px; letter-spacing: -0.5px; color: #121214">Clepsi</div>
+      </div>
+    </div>
+  <script src="/_expo/static/js/web/entry-684743ff8b569fb2cca0669551eec306.js" defer></script>
+</body>
+</html>
