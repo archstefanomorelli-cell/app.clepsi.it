@@ -54,11 +54,16 @@ self.addEventListener('fetch', (evento) => {
   if (richiesta.mode === 'navigate') {
     // Tutte le schermate sono la stessa pagina: si apre dalla copia e intanto
     // si aggiorna. La prima volta (o senza copia) si aspetta la rete.
-    const dallaRete = fetch(richiesta).then(async (risposta) => {
-      if (risposta.ok) await (await caches.open(PAGINE)).put('/', risposta.clone());
-      return risposta;
-    });
-    evento.waitUntil(dallaRete.then(() => undefined, () => undefined));
+    const dallaRete = fetch(richiesta);
+    // La copia si rinnova sempre dalla pagina principale, qualunque schermata
+    // si apra: su app.clepsi.it le altre (per esempio quella aperta da una
+    // notifica) arrivano come "pagina non trovata" e non si potrebbero salvare.
+    const nuovaCopia = fetch(new Request('/', { cache: 'no-cache' }))
+      .then(async (risposta) => {
+        if (risposta.ok) await (await caches.open(PAGINE)).put('/', risposta);
+      })
+      .catch(() => undefined);
+    evento.waitUntil(nuovaCopia);
     evento.respondWith(
       caches
         .open(PAGINE)
